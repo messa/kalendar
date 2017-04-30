@@ -13,6 +13,8 @@
     "react-dom": "^15.5.4"
   },
   "scripts": {
-    "start": "next"
+    "dev": "next",
+    "build": "next build",
+    "prod": "next start"
   }
 }
