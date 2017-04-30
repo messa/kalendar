@@ -153,6 +153,9 @@ export default () => {
           <Month date={nextMonth}/>
         </div>
       </div>
+      <p style={{marginTop: "2rem"}}>
+        <a href="https://github.com/messa/kalendar">Github</a>
+      </p>
     </div>
   );
 }

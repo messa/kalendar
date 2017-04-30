@@ -18,10 +18,10 @@ deploy:
 	git pull --ff-only
 	make docker-image
 	make deploy-temp
-	sleep 2
+	sleep 5
 	curl -f http://localhost:$(temp_port)/ || ( make stop-temp; false )
 	make deploy-live
-	sleep 2
+	sleep 5
 	curl -f http://localhost:$(live_port)/
 	make stop-temp
 	@echo Done
