@@ -1,0 +1,9 @@
+{
+  "name": "kalendar",
+  "version": "0.0.1",
+  "description": "Simple calendar web app",
+  "main": "index.js",
+  "repository": "git@github.com:messa/kalendar.git",
+  "author": "Petr Messner <petr.messner@gmail.com>",
+  "license": "MIT"
+}
