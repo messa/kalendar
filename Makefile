@@ -6,6 +6,7 @@ docker_deploy_args=--restart unless-stopped -e "KALENDAR_MESSA_CZ_GA_ID=$(shell 
 
 
 run:
+	yarn install
 	yarn run dev
 
 docker-image:
@@ -38,4 +39,3 @@ deploy-temp:
 
 stop-temp:
 	docker stop $(container_name_prefix)_temp || true
-
