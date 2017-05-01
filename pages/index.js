@@ -116,10 +116,18 @@ const Month = (props) => {
         </tbody>
       </table>
       <style jsx>{`
+        table.calendar-month {
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+        }
         table.calendar-month td,
         table.calendar-month th {
           padding: 0.1rem 0.66em;
           text-align: center;
+        }
+        table.calendar-month td:first-child,
+        table.calendar-month th:first-child {
+          padding-left: 0;
         }
       `}</style>
     </div>
