@@ -3,11 +3,11 @@ import Head from 'next/head'
 const buildMonthTableData = (year, month) => {
   const month0 = month - 1;
   const calendarTableRows = [];
-  const firstDay = new Date(year, month0, 1);
+  const firstDay = new Date(Date.UTC(year, month0, 1));
   let currentRow = [];
   calendarTableRows.push(currentRow);
   const getDayOfWeek = (dt) => {
-    const dow = dt.getDay();
+    const dow = dt.getUTCDay();
     return (dow == 0) ? 7 : dow;
   };
   const firstDayDow = getDayOfWeek(firstDay);
@@ -19,13 +19,13 @@ const buildMonthTableData = (year, month) => {
     const dow = getDayOfWeek(day);
     currentRow.push({
       dayOfWeek: dow,
-      dayOfMonth: day.getDate()
+      dayOfMonth: day.getUTCDate(),
     })
     day = new Date(day.getTime() + 1000 * 24 * 3600);
-    if (day.getMonth() != month0) {
+    if (day.getUTCMonth() != month0) {
       break;
     }
-    if (day.getDay() == 1) {
+    if (day.getUTCDay() == 1) {
       currentRow = [];
       calendarTableRows.push(currentRow);
     }
