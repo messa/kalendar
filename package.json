@@ -7,10 +7,10 @@
   "author": "Petr Messner <petr.messner@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "next": "^2.3.0-alpha1",
-    "react": "^15.5.4",
-    "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.5.4"
+    "next": "^8.0.0",
+    "react": "^16.8.1",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.8.1"
   },
   "scripts": {
     "dev": "next",
